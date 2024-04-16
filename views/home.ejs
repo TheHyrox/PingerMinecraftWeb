@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ping Minecraft Server</title>
+  <script>
+    function pingServer() {
+      var address = document.getElementById("address").value;
+      var port = document.getElementById("port").value;
+      fetch(`/ping/${address}/${port}`)
+        .then(response => response.json())
+        .then(data => {
+          if (data.online) {
+            document.getElementById("status").textContent = "Online";
+          } else {
+            document.getElementById("status").textContent = "Offline";
+          }
+        })
+        .catch(error => {
+          document.getElementById("status").textContent = "Error";
+        });
+    }
+  </script>
+</head>
+<body>
+  <h1>Ping Minecraft Server</h1>
+  <label for="address">IP Address:</label>
+  <input type="text" id="address" name="address" value="ip">
+  <br>
+  <label for="port">Port:</label>
+  <input type="text" id="port" name="port" value="port">
+  <br>
+  <button onclick="pingServer()">Ping Server</button>
+  <br>
+  <h2 id="status"></h2>
+</body>
+</html>

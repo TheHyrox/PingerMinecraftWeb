@@ -1,0 +1,21 @@
+{
+  "name": "pinger",
+  "version": "1.0.0",
+  "description": "Pinger API Minecraft Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Minecraft",
+    "Server",
+    "Pinger"
+  ],
+  "author": "Hyrox",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "minestat": "^2.0.0"
+  }
+}

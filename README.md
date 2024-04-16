@@ -1,2 +1,2 @@
 # PingerMinecraftWeb
-A NodeJS website to ping minecraft server
+A NodeJS website to ping minecraft server using node modules minestat
